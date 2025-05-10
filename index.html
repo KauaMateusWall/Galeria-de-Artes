@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        header h1 {
+            color: #333;
+            font-size: 2em;
+            margin: 0;
+            text-align: left;
+        }
+
+        header {
+            background-color: bisque;
+            color: white;
+            padding: 10px 0;
+        
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        #ObrasMaisFamosas {
+            display: none;
+        }
+
+        #Artistas {
+            display: none;
+        }
+        div.obras {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Artes</h1>
+        
+        <nav>
+            <h2 id="ArtistasAbrir">Artistas</h2>
+            <ul id="Artistas">
+                <li><a href="#Leonardo">Leonardo da Vinci</a></li>
+                <li><a href="#Michelangelo">Michelangelo</a></li>
+                <li><a href="#VanGogh">Van Gogh</a></li>
+                <li><a href="#PabloPicasso">Pablo Picasso</a></li>
+            </ul>
+
+            <h2 id="Obras">Obras Mais Famosas</h2>
+            <ul id="ObrasMaisFamosas">
+                <li><a href="#">Mona Lisa</a></li>
+                <li><a href="#">O Grito</a></li>
+                <li><a href="#">A Noite Estrelada</a></li>
+                <li><a href="#">Guernica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bem-vindo ao mundo da arte!</h1>
+
+        <!-- Leonardo -->
+        <article>
+            <section>
+                <h2 id="Leonardo">Leonardo da Vinci</h2>
+                <p>
+                    Leonardo da Vinci (1452–1519) foi um dos maiores gênios do Renascimento. Italiano, destacou-se como pintor, escultor, arquiteto, cientista, engenheiro e inventor. É conhecido por obras-primas como Mona Lisa e A Última Ceia, e por seus cadernos repletos de desenhos anatômicos, estudos de máquinas e projetos inovadores. Sua curiosidade e criatividade o tornaram um símbolo do ideal renascentista de conhecimento universal.
+                </p>
+                <button id="ObrasLeonardoAbrir">Obras</button>
+                <div id="ObrasLeonardo" class="obras">
+                    <h3>🎨 Principais Obras de Leonardo da Vinci</h3>
+                    <ul>
+                        <li><strong>Mona Lisa</strong> – Pintura com o famoso sorriso enigmático (Museu do Louvre).</li>
+                        <li><strong>A Última Ceia</strong> – Cena bíblica no convento de Santa Maria delle Grazie, em Milão.</li>
+                        <li><strong>Homem Vitruviano</strong> – Desenho sobre proporções do corpo humano.</li>
+                        <li><strong>Virgem das Rochas</strong> – Duas versões, uma em Paris e outra em Londres.</li>
+                        <li><strong>Dama com Arminho</strong> – Retrato de Cecilia Gallerani com um arminho.</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <!-- Michelangelo -->
+        <article>
+            <section>
+                <h2 id="Michelangelo">Michelangelo</h2>
+                <p>
+                    Michelangelo Buonarroti (1475–1564) foi um escultor, pintor e arquiteto italiano do Renascimento. É famoso por suas esculturas como Davi e Pietà, além de ter pintado o teto da Capela Sistina, uma das obras-primas da arte ocidental. Sua habilidade técnica e expressividade emocional influenciaram gerações de artistas.
+                </p>
+                <button id="ObrasMichelangeloAbrir">Obras</button>
+                <div id="ObrasMichelangelo" class="obras">
+                    <h3>🎨 Principais Obras de Michelangelo</h3>
+                    <ul>
+                        <li><strong>Davi</strong> – Escultura em mármore representando o herói bíblico.</li>
+                        <li><strong>Pietà</strong> – Escultura de Maria segurando Jesus, localizada no Vaticano.</li>
+                        <li><strong>Capela Sistina</strong> – Pintura do teto com cenas do Gênesis.</li>
+                        <li><strong>Juízo Final</strong> – Pintura no altar da Capela Sistina.</li>
+                        <li><strong>Moisés</strong> – Escultura com forte expressão e detalhes anatômicos.</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <!-- Van Gogh -->
+        <article>
+            <section>
+                <h2 id="VanGogh">Van Gogh</h2>
+                <p>
+                    Vincent van Gogh (1853–1890) foi um pintor pós-impressionista holandês, conhecido por suas cores vibrantes e pinceladas expressivas. Suas obras, como A Noite Estrelada e Os Girassóis, refletem sua luta com a saúde mental e sua busca por beleza. Apesar de ter vendido apenas uma pintura em vida, hoje é considerado um dos artistas mais influentes da história da arte.
+                </p>
+                <button id="ObrasVanGoghAbrir">Obras</button>
+                <div id="ObrasVanGogh" class="obras">
+                    <h3>🎨 Principais Obras de Van Gogh</h3>
+                    <ul>
+                        <li><strong>A Noite Estrelada</strong> – Uma das obras mais conhecidas do artista.</li>
+                        <li><strong>Os Girassóis</strong> – Série de quadros com girassóis em diferentes fases.</li>
+                        <li><strong>Quarto em Arles</strong> – Representação de seu quarto.</li>
+                        <li><strong>Auto-retratos</strong> – Pintou diversos autorretratos ao longo da vida.</li>
+                        <li><strong>Campo de Trigo com Corvos</strong> – Obra considerada uma de suas últimas.</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <!-- Pablo Picasso -->
+        <article>
+            <section>
+                <h2 id="PabloPicasso">Pablo Picasso</h2>
+                <p>
+                    Pablo Picasso (1881–1973) foi um pintor, escultor e ceramista espanhol, co-fundador do cubismo. Suas obras, como Guernica e Les Demoiselles d'Avignon, revolucionaram a arte moderna. Picasso explorou diversos estilos e técnicas ao longo de sua carreira, tornando-se um dos artistas mais reconhecidos e influentes do século XX.
+                </p>
+                <button id="ObrasPicassoAbrir">Obras</button>
+                <div id="ObrasPicasso" class="obras">
+                    <h3>🎨 Principais Obras de Pablo Picasso</h3>
+                    <ul>
+                        <li><strong>Guernica</strong> – Representa os horrores da guerra, pintada após o bombardeio da cidade de Guernica.</li>
+                        <li><strong>Les Demoiselles d'Avignon</strong> – Obra que marcou o início do cubismo.</li>
+                        <li><strong>O Velho Guitarrista</strong> – Pintura da fase azul de Picasso.</li>
+                        <li><strong>Mulher Chorando</strong> – Ligada ao sofrimento da guerra civil espanhola.</li>
+                        <li><strong>Retrato de Dora Maar</strong> – Uma de suas musas e companheira.</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <script>
+        $(document).ready(function(){
+            $("#ArtistasAbrir").click(function(){
+                $("#Artistas").slideToggle();
+            });
+
+            $("#Obras").click(function(){
+                $("#ObrasMaisFamosas").slideToggle();
+            });
+
+            $("#ObrasLeonardoAbrir").click(function(){
+                $("#ObrasLeonardo").slideToggle();
+            });
+
+            $("#ObrasMichelangeloAbrir").click(function(){
+                $("#ObrasMichelangelo").slideToggle();
+            });
+
+            $("#ObrasVanGoghAbrir").click(function(){
+                $("#ObrasVanGogh").slideToggle();
+            });
+
+            $("#ObrasPicassoAbrir").click(function(){
+                $("#ObrasPicasso").slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
