@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="styleSheet.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
 
     <style>
         body {
@@ -16,248 +17,182 @@
         header {
             background-color: #d7ccc8;
         }
-
-        .artista-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .artista-section img {
-            width: 250px;
-            height: auto;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        .artista-descricao {
-            max-width: 800px;
-        }
-
-        .obras {
-            display: none;
-            max-width: 800px;
-        }
-
-        .obras img {
-            width: 100%;
-            max-width: 400px;
-            margin: 10px 0;
-            border-radius: 8px;
-        }
-
-        .obras p {
-            margin-bottom: 20px;
-        }
-
-        .menu-list {
-            display: none;
-        }
-
-        button.toggle-btn {
-            margin: 10px 0;
-            padding: 8px 16px;
-            background-color: #a1887f;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button.toggle-btn:hover {
-            background-color: #8d6e63;
-        }
     </style>
 </head>
 <body>
-<header>
-    <h1>Galeria de Artes</h1>
-    <nav>
-        <div class="menu">
-            <h2 id="ArtistasAbrir">🎨 Artistas</h2>
-            <ul id="Artistas" class="menu-list">
-                <li><a href="#Leonardo">Leonardo da Vinci</a></li>
-                <li><a href="#Michelangelo">Michelangelo</a></li>
-                <li><a href="#VanGogh">Van Gogh</a></li>
-                <li><a href="#PabloPicasso">Pablo Picasso</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
-<main>
-    <h2>Bem-vindo ao mundo da arte!</h2>
-
-    <!-- Leonardo da Vinci -->
-    <article>
-        <section class="artista-section">
-            <h2 id="Leonardo">Leonardo da Vinci</h2>
-            <img src="IMG/Leonardo-Da-Vinci.jpg" alt="Leonardo da Vinci">
-            <div class="artista-descricao">
-                <p>Leonardo da Vinci foi um dos maiores gênios do Renascimento, destacando-se como pintor, inventor, cientista, engenheiro, anatomista, escultor e arquiteto. Sua curiosidade e criatividade extraordinárias o tornaram um símbolo da busca pelo conhecimento e da união entre arte e ciência.</p>
-            </div>
-            <button class="toggle-btn" id="ObrasLeonardoAbrir">Ver Obras</button>
-            <div id="ObrasLeonardo" class="obras">
-                <h3>Principais Obras</h3>
-                <ul>
-                    <li><strong>Mona Lisa</strong></li>
-                    <img src="IMG/Mona_Lisa.webp" alt="Mona Lisa">
-                    <p>Uma das pinturas mais famosas do mundo, conhecida pelo enigmático sorriso da mulher retratada.</p>
-
-                    <li><strong>A Última Ceia</strong></li>
-                    <img src="IMG/A Última Ceia.jpg" alt="A Última Ceia">
-                    <p>Representa o momento em que Jesus anuncia a traição de um dos apóstolos.</p>
-
-                    <li><strong>Homem Vitruviano</strong></li>
-                    <img src="IMG/homem-vitruviano.webp" alt="Homem Vitruviano">
-                    <p>Desenho que explora a proporção ideal do corpo humano, unindo arte e ciência.</p>
-
-                    <li><strong>Virgem das Rochas</strong></li>
-                    <img src="IMG/Virgem das Rochas.jpg" alt="Virgem das Rochas">
-                    <p>Mostra a Virgem Maria com o menino Jesus, João Batista e um anjo, em uma gruta.</p>
-
-                    <li><strong>Dama com Arminho</strong></li>
-                    <img src="IMG/DamaComArminho.jpg" alt="Dama com Arminho">
-                    <p>Retrato de Cecilia Gallerani segurando um arminho, símbolo de pureza e status.</p>
+    <header>
+        <h1>Galeria de Artes</h1>
+        <nav>
+            <div class="menu">
+                <h2 id="ArtistasAbrir">🎨 Artistas</h2>
+                <ul id="Artistas" class="menu-list">
+                    <li><a href="#Leonardo">Leonardo da Vinci</a></li>
+                    <li><a href="#Michelangelo">Michelangelo</a></li>
+                    <li><a href="#VanGogh">Van Gogh</a></li>
+                    <li><a href="#PabloPicasso">Pablo Picasso</a></li>
                 </ul>
             </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Bem-vindo ao mundo da arte!</h2>
+
+        <article>
+            <section class="artista-section">
+                <h2 id="Leonardo">Leonardo da Vinci</h2>
+                <img src="IMG/Leonardo-Da-Vinci.jpg" alt="Leonardo da Vinci">
+                <div class="artista-descricao">
+                    <p>Leonardo da Vinci foi um dos maiores gênios do Renascimento, destacando-se como pintor, inventor, cientista, engenheiro, anatomista, escultor e arquiteto. Sua curiosidade e criatividade extraordinárias o tornaram um símbolo da busca pelo conhecimento e da união entre arte e ciência.</p>
+                </div>
+                <button class="toggle-btn" id="ObrasLeonardoAbrir">Ver Obras</button>
+                <div id="ObrasLeonardo" class="obras">
+                    <h3>Principais Obras</h3>
+                    <ul>
+                        <li><strong>Mona Lisa</strong></li>
+                        <img src="IMG/Mona_Lisa.webp" alt="Mona Lisa">
+                        <p>Retrato enigmático de uma mulher com sorriso sutil, considerada uma das obras mais famosas do mundo.</p>
+
+                        <li><strong>A Última Ceia</strong></li>
+                        <img src="IMG/A Última Ceia.jpg" alt="A Última Ceia">
+                        <p>Representa o momento em que Jesus anuncia que será traído por um dos discípulos.</p>
+
+                        <li><strong>Homem Vitruviano</strong></li>
+                        <img src="IMG/homem-vitruviano.webp" alt="Homem Vitruviano">
+                        <p>Estudo das proporções ideais do corpo humano, unindo arte e ciência.</p>
+
+                        <li><strong>Virgem das Rochas</strong></li>
+                        <img src="IMG/Virgem das Rochas.jpg" alt="Virgem das Rochas">
+                        <p>Obra religiosa com grande domínio do chiaroscuro (luz e sombra).</p>
+
+                        <li><strong>Dama com Arminho</strong></li>
+                        <img src="IMG/DamaComArminho.jpg" alt="Dama com Arminho">
+                        <p>Retrato de Cecília Gallerani segurando um arminho, símbolo de pureza e elegância.</p>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <article>
+            <section class="artista-section">
+                <h2 id="Michelangelo">Michelangelo</h2>
+                <img src="IMG/Michelangelo.webp" alt="Michelangelo">
+                <div class="artista-descricao">
+                    <p>Michelangelo foi um dos maiores artistas do Renascimento italiano, conhecido por sua genialidade como escultor, pintor, arquiteto e poeta. Seu trabalho é marcado por uma impressionante habilidade técnica, expressividade emocional e profunda espiritualidade.</p>
+                </div>
+                <button class="toggle-btn" id="ObrasMichelangeloAbrir">Ver Obras</button>
+                <div id="ObrasMichelangelo" class="obras">
+                    <h3>Principais Obras</h3>
+                    <ul>
+                        <li><strong>Davi</strong></li>
+                        <img src="IMG/Davi.jpg" alt="Davi">
+                        <p>Escultura renascentista representando o herói bíblico antes da batalha com Golias.</p>
+
+                        <li><strong>Piétà</strong></li>
+                        <img src="IMG/Pietà.jpg" alt="Piétà">
+                        <p>Virgem Maria segurando o corpo de Jesus após a crucificação.</p>
+
+                        <li><strong>Capela Sistina</strong></li>
+                        <img src="IMG/Capela Sistina.webp" alt="Capela Sistina">
+                        <p>Teto com cenas do Gênesis, incluindo a famosa criação de Adão.</p>
+
+                        <li><strong>Juízo Final</strong></li>
+                        <img src="IMG/Juízo Final.jpg" alt="Juízo Final">
+                        <p>Afresco monumental que cobre a parede do altar da Capela Sistina, mostrando o julgamento das almas.</p>
+
+                        <li><strong>Moisés</strong></li>
+                        <img src="IMG/Moisés.jpg" alt="Moisés">
+                        <p>Escultura poderosa de Moisés com as tábuas da lei.</p>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <article>
+            <section class="artista-section">
+                <h2 id="VanGogh">Van Gogh</h2>
+                <img src="IMG/Vincent van Gogh.jpg" alt="Van Gogh">
+                <div class="artista-descricao">
+                    <p>Van Gogh foi um pintor pós-impressionista holandês, conhecido por suas cores intensas, pinceladas marcantes e forte carga emocional. Sua obra expressa sentimentos profundos e uma visão única da natureza e da vida, refletindo sua luta contra transtornos mentais.</p>
+                </div>
+                <button class="toggle-btn" id="ObrasVanGoghAbrir">Ver Obras</button>
+                <div id="ObrasVanGogh" class="obras">
+                    <h3>Principais Obras</h3>
+                    <ul>
+                        <li><strong>A Noite Estrelada</strong></li>
+                        <img src="IMG/A Noite Estrelada.jpg" alt="A Noite Estrelada">
+                        <p>Paisagem noturna vibrante pintada da janela de um asilo.</p>
+
+                        <li><strong>Os Girassóis</strong></li>
+                        <img src="IMG/Os Girassóis.jpg" alt="Os Girassóis">
+                        <p>Série de quadros de girassóis em vaso, símbolo de calor e alegria.</p>
+
+                        <li><strong>Quarto em Arles</strong></li>
+                        <img src="IMG/Quarto em Arles.jpg" alt="Quarto em Arles">
+                        <p>Representação íntima e tranquila do quarto de Van Gogh.</p>
+
+                        <li><strong>Auto-retratos</strong></li>
+                        <img src="IMG/Auto-retratos.webp" alt="Auto-retratos">
+                        <p>Van Gogh se retratou diversas vezes, revelando suas emoções.</p>
+
+                        <li><strong>Campo de Trigo com Corvos</strong></li>
+                        <img src="IMG/Campo de Trigo com Corvos.jpg" alt="Campo de Trigo com Corvos">
+                        <p>Uma das últimas pinturas de Van Gogh, com atmosfera sombria e dramática.</p>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <article>
+            <section class="artista-section">
+                <h2 id="PabloPicasso">Pablo Picasso</h2>
+                <img src="IMG/Pablo Picasso.webp" alt="Pablo Picasso">
+                <div class="artista-descricao">
+                    <p>Pablo Picasso foi um pintor, escultor e ceramista espanhol, considerado um dos artistas mais influentes e inovadores do século XX. Ele foi cofundador do cubismo, movimento que revolucionou a forma de representar o espaço e as formas na arte.</p>
+                </div>
+                <button class="toggle-btn" id="ObrasPicassoAbrir">Ver Obras</button>
+                <div id="ObrasPicasso" class="obras">
+                    <h3>Principais Obras</h3>
+                    <ul>
+                        <li><strong>Guernica</strong></li>
+                        <img src="IMG/Guernica.jpg" alt="Guernica">
+                        <p>Pintura em preto e branco que denuncia os horrores da guerra civil espanhola.</p>
+
+                        <li><strong>Les Demoiselles d'Avignon</strong></li>
+                        <img src="IMG/Les Demoiselles d'Avignon.jpg" alt="Les Demoiselles d'Avignon">
+                        <p>Obra marcante que rompe com a perspectiva tradicional.</p>
+
+                        <li><strong>O Velho Guitarrista</strong></li>
+                        <img src="IMG/O Velho Guitarrista.webp" alt="O Velho Guitarrista">
+                        <p>Figura melancólica de um músico idoso durante o período azul.</p>
+
+                        <li><strong>Mulher Chorando</strong></li>
+                        <img src="IMG/Mulher Chorando.jpg" alt="Mulher Chorando">
+                        <p>Expressão do sofrimento humano em estilo cubista.</p>
+
+                        <li><strong>Retrato de Dora Maar</strong></li>
+                        <img src="IMG/Retrato de Dora Maar.jpg" alt="Retrato de Dora Maar">
+                        <p>Retrato distorcido de sua musa e companheira.</p>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <section class="form-section">
+            <h2>Entre em Contato</h2>
+            <form id="formContato" method="post" onsubmit="return validarFormulario()">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+        
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" required></textarea><br><br>
+        
+                <button type="submit">Enviar</button>
+            </form>
         </section>
-    </article>
-
-    <!-- Michelangelo -->
-    <article>
-        <section class="artista-section">
-            <h2 id="Michelangelo">Michelangelo</h2>
-            <img src="IMG/Michelangelo.webp" alt="Michelangelo">
-            <div class="artista-descricao">
-                <p>Michelangelo foi um dos maiores artistas do Renascimento italiano, conhecido por sua genialidade como escultor, pintor, arquiteto e poeta. Seu trabalho é marcado por uma impressionante habilidade técnica, expressividade emocional e profunda espiritualidade.</p>
-            </div>
-            <button class="toggle-btn" id="ObrasMichelangeloAbrir">Ver Obras</button>
-            <div id="ObrasMichelangelo" class="obras">
-                <h3>Principais Obras</h3>
-                <ul>
-                    <li><strong>Davi</strong></li>
-                    <img src="IMG/Davi.jpg" alt="Davi">
-                    <p>Escultura que representa o herói bíblico Davi antes do combate com Golias.</p>
-
-                    <li><strong>Piétà</strong></li>
-                    <img src="IMG/Pietà.jpg" alt="Piétà">
-                    <p>Escultura comovente que mostra Maria segurando o corpo de Jesus após a crucificação.</p>
-
-                    <li><strong>Capela Sistina</strong></li>
-                    <img src="IMG/Capela Sistina.webp" alt="Capela Sistina">
-                    <p>Afrescos no teto da capela, incluindo a célebre "Criação de Adão".</p>
-
-                    <li><strong>Juízo Final</strong></li>
-                    <img src="IMG/Juízo Final.jpg" alt="Juízo Final">
-                    <p>Pintura no altar da Capela Sistina representando o fim dos tempos.</p>
-
-                    <li><strong>Moisés</strong></li>
-                    <img src="IMG/Moisés.jpg" alt="Moisés">
-                    <p>Escultura poderosa retratando o profeta com tábuas da Lei.</p>
-                </ul>
-            </div>
-        </section>
-    </article>
-
-    <!-- Van Gogh -->
-    <article>
-        <section class="artista-section">
-            <h2 id="VanGogh">Van Gogh</h2>
-            <img src="IMG/Vincent van Gogh.jpg" alt="Van Gogh">
-            <div class="artista-descricao">
-                <p>Van Gogh foi um pintor pós-impressionista holandês, conhecido por suas cores intensas, pinceladas marcantes e forte carga emocional. Sua obra expressa sentimentos profundos e uma visão única da natureza e da vida, refletindo sua luta contra transtornos mentais.</p>
-            </div>
-            <button class="toggle-btn" id="ObrasVanGoghAbrir">Ver Obras</button>
-            <div id="ObrasVanGogh" class="obras">
-                <h3>Principais Obras</h3>
-                <ul>
-                    <li><strong>A Noite Estrelada</strong></li>
-                    <img src="IMG/A Noite Estrelada.jpg" alt="A Noite Estrelada">
-                    <p>Obra que expressa emoção e movimento através de um céu turbulento.</p>
-
-                    <li><strong>Os Girassóis</strong></li>
-                    <img src="IMG/Os Girassóis.jpg" alt="Os Girassóis">
-                    <p>Série de quadros com girassóis em vasos, celebrando a natureza.</p>
-
-                    <li><strong>Quarto em Arles</strong></li>
-                    <img src="IMG/Quarto em Arles.jpg" alt="Quarto em Arles">
-                    <p>Representação do quarto do artista, simples e vibrante.</p>
-
-                    <li><strong>Auto-retratos</strong></li>
-                    <img src="IMG/Auto-retratos.webp" alt="Auto-retratos">
-                    <p>Pinturas introspectivas que revelam seu estado emocional.</p>
-
-                    <li><strong>Campo de Trigo com Corvos</strong></li>
-                    <img src="IMG/Campo de Trigo com Corvos.jpg" alt="Campo de Trigo com Corvos">
-                    <p>Uma de suas últimas obras, com um céu dramático e atmosfera intensa.</p>
-                </ul>
-            </div>
-        </section>
-    </article>
-
-    <!-- Pablo Picasso -->
-    <article>
-        <section class="artista-section">
-            <h2 id="PabloPicasso">Pablo Picasso</h2>
-            <img src="IMG/Pablo Picasso.jpg" alt="Pablo Picasso">
-            <div class="artista-descricao">
-                <p>Pablo Picasso foi um pintor, escultor e ceramista espanhol, considerado um dos artistas mais influentes e inovadores do século XX. Ele foi cofundador do cubismo, movimento que revolucionou a forma de representar o espaço e as formas na arte.</p>
-            </div>
-            <button class="toggle-btn" id="ObrasPicassoAbrir">Ver Obras</button>
-            <div id="ObrasPicasso" class="obras">
-                <h3>Principais Obras</h3>
-                <ul>
-                    <li><strong>Guernica</strong></li>
-                    <img src="IMG/Guernica.jpg" alt="Guernica">
-                    <p>Obra expressionista que denuncia os horrores da guerra civil espanhola.</p>
-
-                    <li><strong>Les Demoiselles d'Avignon</strong></li>
-                    <img src="IMG/Les Demoiselles d'Avignon.jpg" alt="Les Demoiselles d'Avignon">
-                    <p>Revolucionária, marca o início do cubismo com figuras geométricas.</p>
-
-                    <li><strong>O Velho Guitarrista</strong></li>
-                    <img src="IMG/O Velho Guitarrista.webp" alt="O Velho Guitarrista">
-                    <p>Representa a tristeza e sofrimento em tons de azul.</p>
-
-                    <li><strong>Mulher Chorando</strong></li>
-                    <img src="IMG/Mulher Chorando.jpg" alt="Mulher Chorando">
-                    <p>Expressa dor e angústia com formas distorcidas e cores fortes.</p>
-
-                    <li><strong>Retrato de Dora Maar</strong></li>
-                    <img src="IMG/Retrato de Dora Maar.jpg" alt="Retrato de Dora Maar">
-                    <p>Mostra sua amante e musa com estilo cubista marcante.</p>
-                </ul>
-            </div>
-        </section>
-    </article>
-</main>
-
-<script>
-    $(document).ready(function(){
-        $("#ArtistasAbrir").click(function(){
-            $("#Artistas").slideToggle();
-        });
-
-        $("#ObrasLeonardoAbrir").click(function(){
-            $("#ObrasLeonardo").slideToggle();
-        });
-
-        $("#ObrasMichelangeloAbrir").click(function(){
-            $("#ObrasMichelangelo").slideToggle();
-        });
-
-        $("#ObrasVanGoghAbrir").click(function(){
-            $("#ObrasVanGogh").slideToggle();
-        });
-
-        $("#ObrasPicassoAbrir").click(function(){
-            $("#ObrasPicasso").slideToggle();
-        });
-    });
-</script>
+    </main>
 </body>
 </html>

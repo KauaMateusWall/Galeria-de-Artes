@@ -19,58 +19,75 @@ nav .menu {
     margin-top: 10px;
 }
 
-nav h2 {
-    cursor: pointer;
-    color: #444;
-    font-size: 1.2em;
+nav .menu ul {
+    padding: 0;
+    list-style-type: none;
 }
 
-.menu-list {
-    display: none;
-    list-style: none;
-    padding-left: 20px;
+nav .menu ul li {
+    margin: 5px 0;
 }
 
-.menu-list li a {
-    color: #222;
+nav .menu ul li a {
     text-decoration: none;
+    color: #333;
 }
 
-.menu-list li a:hover {
-    text-decoration: underline;
-}
-
-main {
+.artista-section {
+    margin: 20px;
+    background-color: #fff;
     padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.toggle-btn {
-    background-color: #333;
-    color: white;
-    padding: 8px 15px;
-    margin-top: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.toggle-btn:hover {
-    background-color: #555;
+.artista-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .obras {
+    margin-top: 20px;
     display: none;
-    margin-top: 15px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.obras img {
-    max-width: 100%;
-    height: auto;
+.toggle-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+form {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
 }
