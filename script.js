@@ -1,11 +1,11 @@
 $(document).ready(function() {
     $('#ArtistasAbrir').click(function() {
-        $('#Artistas').toggle();
+        $('#Artistas').slideToggle(300); // 300ms de animação
     });
 
     $('.toggle-btn').click(function() {
         var targetId = $(this).attr('id').replace('Abrir', '');
-        $('#' + targetId).toggle();
+        $('#' + targetId).slideToggle(300); // mesma animação suave
     });
 });
 
